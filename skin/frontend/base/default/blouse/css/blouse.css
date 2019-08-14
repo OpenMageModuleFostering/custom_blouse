@@ -1,0 +1,445 @@
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+
+.measurements_left-part {
+    width: 100% !important;  
+}
+
+.measurements_left-part .custome_standard label {
+    color: #D0145A !important;  
+    font-family: 'BauerBodoniBT-Roman' !important;  
+    font-size: 12px !important;  
+    padding-left: 0px !important; 
+    font-weight: normal !important;  
+}
+
+.measurements_left-part .custome_standard {
+    width: 100% !important;  
+    float: left !important;  
+    margin-bottom: 22px !important;  
+    margin-top: 10px !important;  
+}
+
+.measurements_left-part .detail {
+  margin-top: 0px !important;  
+}
+
+.blouse_box_content .content_botom_link a.save-cont {
+    font-family: 'ProximaNovaBold' !important;  
+    font-size: 13px !important;  
+    color: #3cb676 !important;  
+    background: #fff !important;  
+padding: 0px 0px !important;   
+
+}
+
+.blouse_box_content .content_botom_link a.cancel {
+    font-family: 'ProximaNovaBold' !important;  
+    font-size: 13px !important;  
+    color: #f92d2f !important;  
+    margin: 0px 10px !important;  
+    background: #fff !important;  
+padding: 0px 0px !important ;   
+}
+
+.blouse_box_content .content_botom_link {
+    width: 100% !important;  
+    float: left !important;  
+  /*  margin-top: -85px !important;  */
+    padding: 8px 0px !important;  
+    text-align: left !important;  
+    border-top: 1px solid #e5e5e5 !important;  
+}
+
+
+.blouse_box_content .blouse_style {
+    width: 100% !important;  
+    float: left !important;  
+    /* margin-bottom: 30px !important;   */
+margin-bottom: -56px !important; 
+    border-top: 1px solid #b2b2b2 !important;  
+    height: 331px !important;  
+    overflow-y: hidden !important;  
+}
+
+.blouse_main .review-confirm_infomation .review_measurements_right {
+    width: auto !important;  
+
+}
+
+.blouse_main .review-confirm_infomation .review_measurements_left {
+    /* width: 43%  !important; */
+    float: left  !important;
+    font: normal 13px 'ProximaNovaBold' !important;
+  margin-top: -6px  !important; 
+    color: #262626  !important;
+}
+
+.blouse_main .review-confirm .pricemain {
+    width: 100% !important;
+    float: right !important;
+     max-width: auto !important;
+}
+
+.blouse_main .review-confirm .save-cancel-box .centerdiv {
+    padding-left: 0px !important;
+    width: 127px !important;
+    text-align: center !important;
+    float: left !important;
+    margin-top: 12px !important;
+}
+
+.measurements_left-part .detail_row label {
+   /* width: 88px !important;  */
+    float: left !important;  
+    color: #262626 !important;  
+    font-weight: bold !important;  
+    font-size: 13px !important;  
+    display: inline-block !important;  
+    margin-top: 9px !important;  
+}
+
+.measurements_left-part .detail_row span
+{
+    float: left  !important;  
+    margin-left: 0px  !important;  
+    color: #262626  !important;  
+    font-family: 'ProximaNovaBold'  !important;  
+    font-size: 13px  !important;  
+    display: inline-block  !important;  
+    margin-top: 0px  !important;  
+}
+
+.measurements_main {
+    height: 100% !important;  
+    border: 1px solid #808080 !important;  
+    border-radius: 5px !important;  
+    webkit-border-radius: 5px !important;  
+    moz-border-radius: 5px !important;  
+    khtml-border-radius: 5px !important;  
+    margin-top: 10px !important;  
+   padding: 0px !important; 
+    width: 100% !important;  
+    float: left !important;  
+    height: 238px !important;  
+    overflow: scroll !important;  
+}
+
+.blouse_main .review-confirm {
+    width: 100% !important;  
+    float: left !important;  
+    /* margin-top: 40px !important;   */
+height: 330px !important;  
+}
+
+.blouse-added-row {
+    float: left !important;  
+    margin-top: 173px !important;  
+    position: absolute !important;  
+   margin-left: 151px !important;  
+    margin-bottom: 30px !important;  
+    background-color: white !important;  
+   padding-left: 0px !important
+}
+
+.blouse-added-image img {
+    height: 62px !important;  
+    width: auto !important;  
+    margin-left: 14px !important;  
+}
+
+}
+
+
+
+#stich-blouse-id > input {vertical-align:-2px;}
+#satyapaul_gallery_prev{left:0% !important; position:absolute !important; top:0px !important; z-index:10 !important; width:100%; text-align: center; background:url(../images/arrow-bg1.png) left top repeat; border-bottom:1px solid #cccc;}
+#satyapaul_gallery_prev img{display:inline-block;}
+#satyapaul_gallery_next{left:0% !important; position:absolute; z-index:10 !important; top:auto !important; bottom:0;  width:100%; text-align: center; border-top:1px solid #cccc; background:url(../images/arrow-bg1.png) left top repeat;}
+#satyapaul_gallery_next img{display:inline-block;}
+#span_prev{background:#cfcfcf; float:left; height:25px; width:100%;}
+#span_next{background:#cfcfcf; float:left; height:25px; width:100%;}
+.blouse-added-row{float:left; /*border-top:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7; padding-top:177px;*/  margin-top: -55px;position:absolute; display:none;padding-left: 108px;}
+.blouse-added-image{width:auto; float:left;}
+.blouse-added-image img{height:62px; width:auto;    margin-left: 159px;}
+.blouse-added-tick{width:auto; float:left; padding-top:7px; margin-right:10px;}
+.blouse-added-information{width:auto; float:left; padding-top:5px;}
+.blouse-added-information h3{color:#424242; font: 12px 'ProximaNovaSemibold'; text-transform:uppercase; margin-bottom:5px;}
+.blouse-added-information h4{color:#424242; font: 12px "ProximaNovaLight";     /* margin-bottom: 5px; */; text-transform:none;}
+.blouse-added-information a{color:#0B5BAD; font: 12px 'ProximaNovaRegular'; text-decoration:underline;}
+.blouse-added-information a:hover{text-decoration:none;}
+.product-view .add-to-cart{margin-top:50px;}
+.product-view .add-to-cart.add-margin{margin-top:59px; float:left;}
+.soldoutdiv {background: url("../images/sold.png") repeat scroll 0 0 transparent; display:block; float:left; height:100px; position:absolute; /* right: 129px; */ left:0px; top:0; width:100px;z-index:98;}
+/*****product page part 1 end*******/
+/*************product blouse start***********************/
+/*************chose style start***********************/
+.pop_head-full.headbg{background:url("../images/header-borderbg.jpg") center bottom  repeat-x /*#F5F5F5*/;}
+.pop_head-full {    background: RGBA(233, 233, 233, 0.25); width:100%; float:left;}
+#bk-overlay.bg-color{background:#F5F5F5 !important; opacity:1;}
+.pop_head-full .popup_main {margin-top:0px; background:none; box-shadow:0px 0px 0px;}
+.blouse_main{width:100%; max-width:1152px; float:left; height:500px; overflow-y:scroll; box-sizing:border-box; padding:0px 15px 0px 0px;}
+.blouse_part_heading{width:100%;float:left; color:#D0145A; font-family:'BauerBodoniBT-Roman'; font-size:18px; position:relative; padding:15px 0px 40px 0px;}
+.blouse_part_heading span.color{color:#262626; font: normal 18px 'ProximaNovaLight';}
+.blouse_part_heading a {position:absolute; right:0px; color:#515151; font: normal 12px 'ProximaNovaLight'; width:75px; background:#fff; padding:5px 5px 5px 10px;}
+.blouse_part_heading a span.close{color:#262626; font: normal 12px 'ProximaNovaRegular'; float:left; margin-right:18px;}
+.blouse_part_heading a img{float:right;}
+.blouse_box_row{width:100%; float:left;}
+.blouse_box_heading{font-family:ProximaNovaRegular'ProximaNovaRegular'; font-size:13px; color:#323232; border-top:1px solid #b2b2b2; padding:15px 0px; cursor:pointer;}
+.blouse_box_heading.blouse_heading-step1.completed{border-top:0px;}
+.blouse_box_heading.blouse_heading-step3{border-bottom:1px solid #b2b2b2;}
+.blouse_main .completed{background:url(../images/right-tick.svg) right center no-repeat;}
+.blouse_box_heading.active{color:#C60048;}
+.blouse_box_heading.hover{color:#C60048;}
+.blouse_box_content{width:100%; float:left; font-family:'ProximaNovaRegular'; font-size:13px; color:#323232; padding:0px;}
+
+.blouse_box_content.blouse_content-step3{margin-top:-1px; margin-bottom:40px;}
+.blouse_box_content .blouse_style{width:100%; float:left; margin-bottom:30px; border-top:1px solid #b2b2b2; height:331px; overflow-y:hidden;}
+.blouse_box_content .blouse_style.allproduct{overflow-y:auto; height:auto;}
+.blouse_box_content .blouse_style_box{width:16%; float:left; margin-top:30px; margin-right:.6%}
+.blouse_box_content .blouse_style_box img{width:100%;}
+.blouse_box_content .blouse_style_box_title{width:100%; float:left; margin-top:15px;}
+.blouse_box_content .blouse_style_box_title span{color:#262626; font: normal 13px 'ProximaNovaRegular';}
+.blouse_box_content .blouse_style_box_title input{ margin-right:5px; margin-top:-1px; vertical-align:middle;}
+.blouse_box_content .content_botom_link{width:100%; float:left; padding:22px 0px; text-align:right; border-top:1px solid #e5e5e5;}
+.blouse_box_content .content_botom_link a.seemore{color:#262626; font-family:'ProximaNovaRegular'; font-size:13px; text-decoration:underline;}
+.blouse_box_content .content_botom_link a.cancel{font-family:'ProximaNovaBold'; font-size:13px; color:#f92d2f; margin:0px 10px; background:#fff; padding:5px 25px;}
+.blouse_box_content .content_botom_link a.save-cont{font-family:'ProximaNovaBold'; font-size:13px; color:#3cb676; background:#fff; padding:5px 25px;}
+/*************chose style end***********************/
+/***********measurements start step 2******************/
+.measurements_main{border:1px solid #808080; border-radius:5px; webkit-border-radius:5px; moz-border-radius:5px; khtml-border-radius:5px; margin-top:10px; padding:30px; width:100%; float:left;}
+.measurements_left-part{width:45%; float:left;}
+.measurements_left-part .custome_standard{width:100%; float:left; margin-bottom:22px;}
+.measurements_left-part .custome_standard label{color:#D0145A; font-family:'BauerBodoniBT-Roman'; font-size:14px; padding-left:5px; font-weight:normal;} 
+.measurements_left-part .custome_standard input{vertical-align:middle; margin-top:-3px;}
+.measurements_left-part .custome_standard input.roundmargin{margin-left:20px;}
+.measurements_left-part .detail { margin-top:22px;}
+.measurements_left-part .detail_row label{width:158px; float:left; color:#262626;font-weight: bold; font-size:13px; display:inline-block; margin-top:9px;}
+.measurements_left-part .detail_row input{width:53px; border:1px solid #b2b2b2; border-radius:3px; moz-border-radius:3px; webkit-border-radius:3px; khtml-border-radius:3px; float:left; color:#262626; font-family:'ProximaNovaBold'; font-size:13px; text-align:center;}
+.measurements_left-part .detail_row span{float:left; margin-left:25px; color:#262626; font-family:'ProximaNovaBold'; font-size:13px; display:inline-block; margin-top:9px;}
+.measurements_left-part .detail{width:100%; float:left;    font-weight: bold;}
+.measurements_left-part .detail_row{width:100%; float:left; margin-bottom:20px;}
+.measurements_left-part .show_measurement{color:#00A99D; font-family:'ProximaNovaRegular'; font-size:13px; display:inline-block; margin-top:15px; text-decoration:underlinel}
+.measurements_left-part .show_measurement:hover{text-decoration:none;}
+.measurements_right-part{width:auto; float:left;}
+.blouse_content-step2 .content_botom_link{border-top:0px;}
+.measurement_size{width:100%; float:left;}
+/*.measurement_size span {width:36px; height:20px; float:left; line-height:18px; background-color:#ebebeb; border:1px solid #ebebeb; color:#666666; font-family:'ProximaNovaBold'; font-size:13px; margin-right:10px; text-align:center; cursor:pointer;}*/
+.measurement_size span { background-color: #ebebeb; border: 1px solid #ebebeb; color: #666666; cursor: pointer; float: left; font-family: "ProximaNovaBold"; font-size: 13px; height: auto; line-height: 15px; margin-right: 10px; padding:8px 5px; text-align: center; width:36px;}
+.measurement_size span:hover{font-family:'ProximaNovaBold'; font-size:13px; background-color:#fff; border:1px solid #D0145A; color:#D0145A;}
+.measurement_size span.current{font-family:'ProximaNovaBold'; font-size:13px; background-color:#fff; border:1px solid #D0145A; color:#D0145A;}
+/***********measurements end step2******************/
+
+/****Review and Confirm step3 start*****/
+.border-none{border:0px;}
+.blouse_main .review-confirm{width:100%; float:left; margin-top:40px;}
+.blouse_main .review-confirm_infomation{width:58%; float:left;}
+.blouse_main .review-design-name{width:100%; float:left; padding-bottom:15px; border-bottom:1px solid #e5e5e5; margin-bottom:20px;}
+.blouse_main .design-name-left {width:43%; float:left; margin-top:9px; font-family:'ProximaNovaBold';}
+.blouse_main .name-value{width:57%; float:left; font: normal 13px 'ProximaNovaLight';}
+.blouse_main .name-value input#customer_design-name{width:100%; max-width:372px; background:#fff; border:1px solid #e9e9e9; border-radius:3px; khtml-border-radius:3px; webkit-border-radius:3px; moz-border-radius:3px; height:31px; color:#989898; font-family:'ProximaNovaRegular'; font-size:12px; box-sizing:border-box;padding-left:15px; padding-right:15px;}
+.blouse_main .review-confirm_infomation .review_blouse{width:100%; float:left; padding-bottom:20px; border-bottom:1px solid #e5e5e5; margin-bottom:10px;}
+.blouse_main .review-confirm_infomation .review_blouse_left{width:43%; float:left; margin-top:8px; font-family:'ProximaNovaBold';}
+.blouse_main .review-confirm_infomation .review_blouse_right{width:57%; float:left; font: normal 13px 'ProximaNovaLight';}
+.blouse_main .review-confirm_infomation .review_blouse_right span{float:left; margin-top:25px; margin-right:35px; display:inline-block; color:#262626; font: normal 13px 'ProximaNovaLight';}
+.blouse_main .review-confirm_infomation .review_measurements{width:100%; float:left;}
+.blouse_main .review-confirm_infomation .review_measurements_left{width:43%; float:left; font: normal 13px 'ProximaNovaBold'; margin-top:10px; color:#262626;}
+.blouse_main .review-confirm_infomation .review_measurements_right{width:57%; float:left; font: normal 13px 'ProximaNovaLight';}
+.blouse_main .review-confirm_infomation .review_measurements_right .measure_review_row {width:100%; float:left; padding:10px 0px; border-bottom:1px solid #e5e5e5; color:#262626;}
+.blouse_main .review-confirm_infomation .review_measurements_right .measure_review_row.border-none{border:0px;} 
+.blouse_main .review-confirm_infomation .review_measurements_right .measure_review_row .measure_review_left-box{width:160px; float:left; padding:0px 0px 0px 3px;  font: normal 13px 'ProximaNovaLight'; color:#262626;}
+.blouse_main .review-confirm_infomation .review_measurements_right .measure_review_row .measure_review_right-box{width: auto; float:left;  font: normal 13px 'ProximaNovaLight'; color:#262626;}
+.blouse_main .review-confirm_infomation .review_measurements_left .measure_review_row{width:100%; float:left;}
+.blouse_main .review-confirm_infomation .review_measurements_left .measure_review_left-box{width:100%; float:left;}
+.blouse_main .review-confirm_infomation .review_measurements_left .measure_review_right-box{width:100%; float:left;}
+.blouse_main .review-confirm_infomation .review_instructions{width:100%; float:left; position:relative; border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; margin:15px 0 5px 0; padding: 15px 0;  position: relative; cursor:pointer;}
+.blouse_main .review-confirm_infomation .review_instructions .plus{position:absolute; right:0px; top:10px;}
+
+.instruction-details{width:100%; float:left; display:none; background:#fff; box-sizing:border-box; padding:0px;}
+.instruction-details textarea{width:100%; max-width:100%; border:0px; padding:15px;}
+.review_instructions span.plus{background:url(../images/plusn.png) left top no-repeat; width:20px; height:20px; display:inline-block;}
+.review_instructions span.plus.minus{background:url(../images/minusn.png) left top no-repeat; width:20px; height:20px; display:inline-block;}
+.instruction-details p {font:normal 13px 'ProximaNovaLight'; color:#515151;}
+.instruction-details.inst-display-block{display:block;}
+.instruction-details .text-description{width:100%; max-width:100%; float:left; margin-bottom:15px;  border:1px solid #e9e9e9;}
+.instruction-details button{min-width:120px;}
+
+.blouse_main .review-confirm .pricemain{width:100%; float:right; max-width:32%;}
+.blouse_main .review-confirm .price-productinfo{width:100%; float:right; border:1px solid #e5e5e5; padding:2px; background:#fff;} 
+.blouse_main .review-confirm .price-productinfo p.amount{color:#262626; font-family:'ProximaNovaRegular'; font-size:18px; padding:25px 0px 25px 20px; border-bottom:1px solid #e5e5e5; font-style:normal; margin:0px;} 
+.blouse_main .review-confirm .price-productinfo p.pro-detail{color:#868686; font-family:'ProximaNovaRegular'; font-size:12px; padding:25px 10px 25px 20px; line-height:14px; margin:0px;} 
+.blouse_main .review-confirm .save-cancel-box{width:100%; float:right;}
+.blouse_main .review-confirm .save-cancel-box .centerdiv{padding-left:0px; width:217px; text-align:center; float:left; margin-top:22px;}
+.centerdiv p {background:#fff; display:block; margin-bottom:10px; padding:10px 0; width:100%;}
+.blouse_main .review-confirm .save-cancel-box .centerdiv p.save-continure a{color:#4bbb81; font-family:'ProximaNovaBold'; font-size:13px;}
+.blouse_main .review-confirm .save-cancel-box .centerdiv p.cancel a{color:#fa5f63; font-family:'ProximaNovaBold'; font-size:13px;}
+.review_blouse_right img{width:21%; background-color:#fff;}
+/****Review and Confirm step3 end*****/
+/****part4 start*****/
+.scale_row1{height:7px; position:absolute; z-index:1; top:1px; width:70px; margin:30px 0px 0px 10px; cursor:pointer;}
+.scale_row1 .informationbox{display:none;}
+.scale_row1:hover .informationbox {left:108px; position:absolute; width:264px; display:block; width:541px; height:auto; width:348px; box-sizing:border-box; padding-left:88px; padding-top:25px; padding-right:25px; background: url(../images/box-text.png) left top no-repeat; height:178px; top:-36px; left:70px;}
+.scale_row1:hover .informationbox h4{color:#F7A02E; font-family:'ProximaNovaBold'; font-size:11px;}
+.scale_row1:hover .informationbox h3{color:#262626; font-family:'ProximaNovaLight'; font-size:18px;}
+.scale_row1:hover .informationbox p{color:#262626; font-family:'ProximaNovaLight'; font-size:13px; line-height:18px;}
+.scale_row1 .scal-left{display:block; margin-left:7px;}
+.scale_row1:hover .scal-left{height:auto; z-index:2; display:block; margin-left:7px;}
+.measurements_right-part{position:relative;}
+
+.scale_row2{height:7px; position:absolute; z-index:1; top:32px; width:70px; margin:30px 0px 0px 10px; cursor:pointer;}
+.scale_row2 .informationbox{display:none;}
+.scale_row2:hover .informationbox {left:108px; position:absolute; width:264px; display:block; width:541px; height:auto; width:348px; box-sizing:border-box; padding-left:88px; padding-top:25px; padding-right:25px; background: url(../images/box-text.png) left top no-repeat; height:178px; top:-36px; left:70px;}
+.scale_row2:hover .informationbox h4{color:#F7A02E; font-family:'ProximaNovaBold'; font-size:11px;}
+.scale_row2:hover .informationbox h3{color:#262626; font-family:'ProximaNovaLight'; font-size:18px;}
+.scale_row2:hover .informationbox p{color:#262626; font-family:'ProximaNovaLight'; font-size:13px; line-height:18px;}
+.scale_row2 .scal-left{display:block; margin-left:7px;}
+.scale_row2:hover .scal-left{height:auto; z-index:2; display:block; margin-left:7px;}
+.blouse_content-step2{display:none;}
+.blouse_content-step3{display:none;}
+
+.scale_row3{height:7px; position:absolute; z-index:1; top:74px; width:70px; margin:30px 0px 0px 10px; cursor:pointer;}
+.scale_row3 .informationbox{display:none;}
+.scale_row3:hover .informationbox {left:108px; position:absolute; width:264px; display:block; width:541px; height:auto; width:348px; box-sizing:border-box; padding-left:88px; padding-top:25px; padding-right:25px; background: url(../images/box-text.png) left top no-repeat; height:178px; top:-36px; left:70px;}
+.scale_row3:hover .informationbox h4{color:#F7A02E; font-family:'ProximaNovaBold'; font-size:11px;}
+.scale_row3:hover .informationbox h3{color:#262626; font-family:'ProximaNovaLight'; font-size:18px;}
+.scale_row3:hover .informationbox p{color:#262626; font-family:'ProximaNovaLight'; font-size:13px; line-height:18px;}
+.scale_row3 .scal-left{display:block; margin-left:7px;}
+.scale_row3:hover .scal-left{height:auto; z-index:2; display:block; margin-left:7px;}
+
+
+.scale_row4{height:7px; position:absolute; z-index:1; top:115px; width:70px; margin:30px 0px 0px 10px; cursor:pointer;}
+.scale_row4 .informationbox{display:none;}
+.scale_row4:hover .informationbox {left:108px; position:absolute; width:264px; display:block; width:541px; height:auto; width:348px; box-sizing:border-box; padding-left:88px; padding-top:25px; padding-right:25px; background: url(../images/box-text.png) left top no-repeat; height:178px; top:-36px; left:70px;}
+.scale_row4:hover .informationbox h4{color:#F7A02E; font-family:'ProximaNovaBold'; font-size:11px;}
+.scale_row4:hover .informationbox h3{color:#262626; font-family:'ProximaNovaLight'; font-size:18px;}
+.scale_row4:hover .informationbox p{color:#262626; font-family:'ProximaNovaLight'; font-size:13px; line-height:18px;}
+.scale_row4 .scal-left{display:block; margin-left:7px;}
+.scale_row4:hover .scal-left{height:auto; z-index:2; display:block; margin-left:7px;}
+
+
+
+.scale_row5{height:7px; position:absolute; z-index:1; top:160px; width:70px; margin:30px 0px 0px 10px; cursor:pointer;}
+.scale_row5 .informationbox{display:none;}
+.scale_row5:hover .informationbox {left:108px; position:absolute; width:264px; display:block; width:541px; height:auto; width:348px; box-sizing:border-box; padding-left:88px; padding-top:25px; padding-right:25px; background: url(../images/box-text.png) left top no-repeat; height:178px; top:-36px; left:70px;}
+.scale_row5:hover .informationbox h4{color:#F7A02E; font-family:'ProximaNovaBold'; font-size:11px;}
+.scale_row5:hover .informationbox h3{color:#262626; font-family:'ProximaNovaLight'; font-size:18px;}
+.scale_row5:hover .informationbox p{color:#262626; font-family:'ProximaNovaLight'; font-size:13px; line-height:18px;}
+.scale_row5 .scal-left{display:block; margin-left:7px;}
+.scale_row5:hover .scal-left{height:auto; z-index:2; display:block; margin-left:7px;}
+
+
+.scale_row6{height:7px; position:absolute; z-index:1; top:214px; width:70px; margin:30px 0px 0px 10px; cursor:pointer;}
+.scale_row6 .informationbox{display:none;}
+.scale_row6:hover .informationbox {left:108px; position:absolute; width:264px; display:block; width:541px; height:auto; width:348px; box-sizing:border-box; padding-left:88px; padding-top:25px; padding-right:25px; background: url(../images/box-text.png) left top no-repeat; height:178px; top:-36px; left:70px;}
+.scale_row6:hover .informationbox h4{color:#F7A02E; font-family:'ProximaNovaBold'; font-size:11px;}
+.scale_row6:hover .informationbox h3{color:#262626; font-family:'ProximaNovaLight'; font-size:18px;}
+.scale_row6:hover .informationbox p{color:#262626; font-family:'ProximaNovaLight'; font-size:13px; line-height:18px;}
+.scale_row6 .scal-left{display:block; margin-left:7px;}
+.scale_row6:hover .scal-left{height:auto; z-index:2; display:block; margin-left:7px;}
+
+
+.popup_center.blousecenter{max-width:1152px; width:90%;margin:0px auto;}
+.blouse-div{width:100%; float:left;}
+.popup_center.blousecenter .popup_main{padding:2%; width:100%;}
+.switch_blows{cursor:pointer;    padding-top: 10px;}
+.popup_center.blousecenter .popup_main .close{width:auto; float:left; right:11px; top:6px; left:6px;}
+.popup_center.blousecenter .popup_main .close span.closetext{float:left; color:#262626; font-family:'ProximaNovaRegular';}
+.popup_center.blousecenter .popup_main .close img{float:right; display:inline-block;}
+/****part4 end*****/
+
+
+/*************product blouse end***********************/
+ /********feedback form page start*********************/
+
+.blosue-popn{width:100%; float:left;}
+.blosue-headern{width:100%; float:left;}
+.blosue-contentn{width:100%; float:left; padding:0px 15px; box-sizing:border-box;}
+.blouse-image-part{width:20%; float:left; margin-right:15px;}
+.blouse-textpart{width:50%; float:left}
+.blous-rown{width:100%; float:left; border-bottom:1px solid #efefef; padding:5px 0px;}
+.blous-colu-left{width:150px; float:left; margin-right:10px;}
+.firsttext{font-weight:bold;}
+.scrol-top{background:url("../images/icon_top1.png") no-repeat scroll left top; bottom:50px;  display:none;  height:40px; opacity:0.3; position:fixed; right:50px; text-indent:-9999px; width:40px; z-index: 9999999;}
+/*****popup css start ************/
+#popup_signin {display:none;} 
+#register{display:none;} 
+.popup_full {width:100%;float:left;	position:fixed;	z-index:999999;display:none;height:100%;top:0px;left:0px; background-color: white;}
+.popup_full.pos_absulte{position:fixed ;}/*absolute*/
+.popup_center {max-width:700px; width:90%;margin:0px auto;}
+.popup_main {width:100%;float:left;position:relative;background-color:#fff;box-shadow:2px 2px 2px #ccc;	margin-top:50px;}
+.popup_main .close {position:absolute;right:3px;top:3px;cursor:pointer;}
+#bk-overlay {width:100%; display:none;height:100%; background:url(../images/bg-overlay.png) left top repeat; position:fixed; z-index:1001;float:left; left:0px; top:0px;}
+.popup-container{display:none; float:left;  height:100%;  left:0; position:fixed; top:7%; width:100%; z-index:1003;}
+.popup_centerhome {margin: 0 auto; max-width:686px; width: 90%;}
+.popup_mainhome {box-shadow:1px 1px 1px #DFDFDF; float: left; margin-top:30%; position: relative; width: 100%; background: url(../images/pop_up_hompagebg.png) center -2px no-repeat; text-align:center; padding-bottom:32px;}
+.popup_mainhome #newsletter-validate-detail2 {position:relative;}
+.popup_mainhome #advice-validate-email-newsletter2{bottom:0; height:15px; left:0 !important; margin-left: 20px; opacity:1 !important; position: absolute; margin-left:20px !important; top:35px !important;}
+.block.block-subscribe #advice-validate-email-newsletter{opacity:1 !important;}
+.popup-container .popup-close{float: right; font-size: 17px; margin-right:6px; margin-top:9px;}
+.popup-container .popup-title{font-size:20px; text-align: center; padding:24px 0px 18px 0px; color:#b156ac; font: normal 21px 'CallunaRegular';}
+.popup-container p{text-align: center; font:14px 'PrestigeEliteStdBold'; color:#808080;}
+.popup-container form{max-width:72%; margin:20px auto 0px auto; width:94%; padding:0px 3%; clear:both;}
+.popup-container form .input-text{height:36px; font: normal 14px 'PrestigeEliteStdBold'; color:#919191; float:left; width:71%;}
+.popup-container form .button{margin-top:0px; float:right; height:35px;}
+.cart-mobile-msg{ text-align: center; background: #CF8FC8; color:#fff; padding:5px 0;}
+.product-view .product-shop{margin-bottom:2px;}
+#lastname.reg-pwd-new{width:0px; height:0px; position:absolute; border:0px; visibility:hidden;}
+.add-to-cart-wrapper {padding-left:0px;}
+.size_guide {display: none;bottom:22px;left:205px;position: absolute;text-transform:uppercase;font: normal 13px 'PrestigeEliteStdBold';color:#ed155a;cursor:pointer; text-decoration:underline;}
+.size_guide:hover{text-decoration:none;}
+
+
+.popup-container{display:none; float:left;  height:100%;  left:0; position:fixed; top:7%; width:100%; z-index:9999;}
+.popup_centerhome {margin: 0 auto; max-width:686px; width: 90%;}
+.popup_mainhome {box-shadow:1px 1px 1px #DFDFDF; float: left; margin-top:30%; position: relative; width: 100%; background:#f5f5f5; text-align:center; padding-bottom:32px;}
+.popup_mainhome #newsletter-validate-detail2 {position:relative;}
+.popup_mainhome #advice-validate-email-newsletter2{bottom:0; height:15px; left:0 !important; margin-left: 20px; opacity:1 !important; position: absolute; margin-left:20px !important; top:35px !important;}
+.block.block-subscribe #advice-validate-email-newsletter{opacity:1 !important;}
+.popup-container .popup-close{float: right; font-size: 17px; margin-right:6px; margin-top:0px;}
+.popup-container .popup-title{font-size:20px; text-align: center; padding:24px 0px 18px 0px; color:#D0145A; font: normal 21px 'BauerBodoniBT-Roman'; text-transform:uppercase; text-transform:uppercase;}
+.popup-container p{text-align: center; font:14px/21px 'ProximaNovaRegular'; color:#6D6D6D;}
+.popup-container form{max-width:75%; margin:45px auto 0px auto; width:94%; padding:0px 3%; clear:both;}
+.popup-container form .input-text{height:36px; font:normal 13px 'ProximaNovaRegular'; color:#7F7F7F; float:left; width:75%;}
+.popup-container form .button{margin-top:0px; float:right; height:35px; margin-left:10px; width:105px; border-radius:3px; khtml-border-radius:3px; webkit-border-radius:3px; moz-border-radius:3px;}
+.popup_mainhome .popup-close img{ width:15px;}
+
+/*churidar kurta popup start*/
+#bk-overly {background-color:#000;height:100%;width:100%;position:fixed;left:0;opacity:0.5; display:none; top:0;}
+/* popup code start for view measurement at cart page*/
+.blouseData-view-measure .main-popup { float: left; left: 0; position: fixed; top: 0;width: 100%;z-index: 9999;}
+.blouseData-view-measure .popup_center { height: 700px; margin: 0 auto; max-width: 400px; width: 100%;}
+.blouseData-view-measure .popup_main { background-color: #fff; box-shadow: none; float: left;  margin-top: 50px; position: relative; width: 100%;}
+.blouseData-view-measure .v-m_popup { background-color: #fff; box-shadow: none; float: left; height: auto; margin: 0; max-width: 700px;padding: 30px 0; width: 100%;}
+.blouseData-view-measure .blosue-popn { float: left;  width: 100%;}
+.blouseData-view-measure .blosue-headern { float: left; width: 100%;}
+.blouseData-view-measure .blosue-contentn { box-sizing: border-box; float: left; padding: 0 20px; width: 100%;}
+.blouseData-view-measure .blouse-textpart { float: left; width: 100%; overflow-y:scroll; height:440px;}
+.blouseData-view-measure .blous-rown {  border-bottom: 1px solid #efefef; float: left; padding: 10px 0; width: 100%; font:13px "ProximaNovaLight";}
+.blouseData-view-measure  .blous-colu-left { float: left; margin-right: 10px; width: 150px;}
+.blouseData-view-measure .close-popup {background: #fff none repeat scroll 0 0; border-radius: 50%; color: #868686; font-size: 17px; padding: 3px 6px; position: absolute; right: -7px; top: -12px;}
+.blouseData-view-measure .blosue-contentn h3 { color: #dc2f6d; font-size: 25px; margin-bottom: 15px; text-align: center;}
+.current-step{color:#DA2F6D; font-size:13px;}
+/* popup code end for view measurement at cart page*/
+/*view measurement popup start here*/
+#bk-overlay-view-measure {background-color:#000;height:100%;width:100%;position:fixed;left:0;opacity:0.5; display:none; z-index:1; top:0;}
+.popup-full-view-measure {float:left;width:100%;position:relative;z-index:100000; top:3%; left:0px;}
+.popup-center-view-measure {max-width:400px;margin:25px auto;height:700px;}
+.popup-main-view-measure {float:left;width:100%;position:relative;}
+.close-bttn-view-measure {position:relative;}
+.close-bttn-view-measure span {background: #fff none repeat scroll 0 0;border-radius: 14px;box-sizing: border-box;font-size: 17px;height: 24px;padding: 2px 3px 3px 6px;position: absolute;right: -7px;top: -9px;width: 24px;cursor:pointer;	color:#868686;}
+.popup-container-view-measure {float: left; background:#fff; padding:20px; width:100%;}
+ h1.popup-heading {font-size: 25px; margin-bottom: 30px; text-align: center;}
+.main-class-view-measure{display:none; position:fixed; left:0; top:0; z-index:99; width:100%;}
+.main-class-view-measure .blouse_main .review_measurements_right { width: 100%;}
+.main-class-view-measure .review-confirm_infomation { width: 100%;}
+.cart-table .blouse .product-cart-image img{ border:1px solid #ededed;}
+/*view measurement popup start here*/
+
+/*************product blouse start***********************/
+/***********measurements start******************/
+.measurements_left-part{width:53%;}
+/***********measurements end******************/
+/*************product blouse end***********************/
+
+
+
+

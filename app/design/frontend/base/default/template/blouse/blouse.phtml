@@ -1,0 +1,646 @@
+<?php   
+	$modulestatus = Mage::getStoreConfig('chandan/chandan_group/chandan_blouse',Mage::app()->getStore());		               
+	$setprice = Mage::getStoreConfig('chandan/chandan_group/chandan_input',Mage::app()->getStore());		               
+	$collection = Mage::getModel('blouse/blouse')->getCollection();						
+?> 
+		
+<script>
+jQuery(document).ready(function(){
+	var symbol = '<?php echo Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol(); ?>';
+    var price_val = 0;
+	var old_val = 0;
+	var regular_val = 0;
+    var extra_va = 0;
+    jQuery('.switch_blows').click(function(){                 
+		price_val1 =  jQuery('.special-price').children('.price').text().replace(symbol, '');
+		price_val =  parseInt(price_val1.replace(/,/g,''));			
+		old_val1 =  jQuery('.old-price').children('.price').text().replace(symbol, '');
+		old_val =  parseInt(old_val1.replace(/,/g,''));
+		regular_val1 =  jQuery('.regular-price').children('.price').text().replace(symbol, '');	
+		regular_val =  parseInt(regular_val1.replace(/,/g,''));			
+		extra_va = parseInt("<?php echo $setprice; ?>");		
+		var modi_price = (price_val + extra_va);
+		var old_price = (old_val + extra_va);
+		var reg_price = (regular_val + extra_va);
+		jQuery('.special-price').children('.price').text(symbol+modi_price);
+		jQuery('.old-price').children('.price').text(symbol+old_price);
+		jQuery('.regular-price').children('.price').text(symbol+reg_price);               
+    });
+	
+	jQuery('#close_blouse_section').click(function(){   	 
+		price_val = parseFloat(price_val).toFixed(2)
+		price_val = price_val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");	                           
+		jQuery('.special-price').children('.price').text(symbol+price_val);            
+		old_val = parseFloat(old_val).toFixed(2)
+		old_val = old_val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+		jQuery('.old-price').children('.price').text(symbol+old_val);                        
+		regular_val = parseFloat(regular_val).toFixed(2)
+		regular_val = regular_val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+		jQuery('.regular-price').children('.price').text(symbol+regular_val);       
+    });	
+    
+    
+    jQuery('#cancel_step1').click(function(){   	 
+		price_val = parseFloat(price_val).toFixed(2)
+		price_val = price_val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");	                           
+		jQuery('.special-price').children('.price').text(symbol+price_val);            
+		old_val = parseFloat(old_val).toFixed(2)
+		old_val = old_val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+		jQuery('.old-price').children('.price').text(symbol+old_val);                        
+		regular_val = parseFloat(regular_val).toFixed(2)
+		regular_val = regular_val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+		jQuery('.regular-price').children('.price').text(symbol+regular_val);       
+    });		
+    jQuery('#cancel_step2').click(function(){   	 
+		price_val = parseFloat(price_val).toFixed(2)
+		price_val = price_val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");	                           
+		jQuery('.special-price').children('.price').text(symbol+price_val);            
+		old_val = parseFloat(old_val).toFixed(2)
+		old_val = old_val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+		jQuery('.old-price').children('.price').text(symbol+old_val);                        
+		regular_val = parseFloat(regular_val).toFixed(2)
+		regular_val = regular_val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+		jQuery('.regular-price').children('.price').text(symbol+regular_val);       
+    });	
+    
+    jQuery('#cancel_step3').click(function(){   	 
+		price_val = parseFloat(price_val).toFixed(2)
+		price_val = price_val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");	                           
+		jQuery('.special-price').children('.price').text(symbol+price_val);            
+		old_val = parseFloat(old_val).toFixed(2)
+		old_val = old_val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+		jQuery('.old-price').children('.price').text(symbol+old_val);                        
+		regular_val = parseFloat(regular_val).toFixed(2)
+		regular_val = regular_val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+		jQuery('.regular-price').children('.price').text(symbol+regular_val);       
+    });	        	
+});
+
+var curOpenId = "";
+function showTab(id) //
+{	
+	if(curOpenId != "")
+	{
+		hideTab(curOpenId);
+	}
+	curOpenId = id;
+	document.getElementById(id).style.display = 'block';
+	document.getElementById("bk-overlay").style.display = 'block';
+		};
+		
+	function hideTab()
+	{ 		
+		document.getElementById(curOpenId).style.display = 'none';
+		document.getElementById("bk-overlay").style.display = 'none';						
+	};
+
+jQuery(document).ready(function(){
+	jQuery('.popup-close').click(function(){  
+		jQuery('.popup-container').hide();
+	});
+	
+	jQuery('li.level0').hover(function(){
+		jQuery(this).prev().toggleClass('bor-none');
+		});
+
+    jQuery(".uparrow").click(function(){
+		jQuery(".salerow").slideUp("slow", function(){
+			jQuery(".downarrow").slideDown("slow");
+		});
+    });
+	
+	jQuery(".downarrow").click(function(){
+        jQuery(".downarrow").slideUp("slow", function(){
+			jQuery(".salerow").slideDown("slow");
+		});
+    });
+	jQuery(".cross").click(function(){
+		jQuery(".salerow").slideUp("slow");
+    });
+	
+	jQuery("#gun1").click(function(){	
+		jQuery('.gun1').addClass('gautam');
+		jQuery('.gun').removeClass('gautam');				
+		var input_style_id = jQuery('#input_style-id').val();		
+		var input_around_bust_id = jQuery('#input_around_bust-id').val();	
+		var input_above_waist_id = jQuery('#input_above_waist-id').val();
+		var input_shoulder_id = jQuery('#input_shoulder-id').val();			
+		var input_around_arm_id = jQuery('#input_around_arm-id').val();	
+		var input_height_id = jQuery('#input_height-id').val();			
+		var input_shoulder_height_id = jQuery('#input_shoulder_height-id').val();	
+		var input_cross_front_id = jQuery('#input_cross_front-id').val();	
+		var input_cross_back_id = jQuery('#input_cross_back-id').val();	
+		var input_neck_depth_back_id = jQuery('#input_neck_depth_back-id').val();	
+		var input_neck_depth_front_id = jQuery('#input_neck_depth_front-id').val();	
+		var input_measurement_size_id = jQuery('#input_measurement_size-id').val();	
+		var input_blouse_measurement_unit_id = jQuery('#input_blouse_measurement_unit-id').val();	
+		var input_length_hps_id = jQuery('#input_length_hps-id').val();	
+		var input_sleeve_length_id = jQuery('#input_sleeve-length-id').val();
+		var input_waist_id = jQuery('#input_waist-id').val();
+		var input_bicep_id = jQuery('#input_bicep-id').val();	
+		var customer_blouse_name = jQuery('#customer-blouse-name').val();	
+		var input_special_instruction = jQuery('#input-special-instruction').val();
+		var productid = jQuery('#productid').val();	
+		var images_name = jQuery('#img_blouse_right-id').children().attr('src');				
+		//alert(input_style_id);
+		jQuery.ajax({
+		type: "POST",
+		url: '<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>blouse/index/setblousedata',
+		data: {images_name:images_name,input_style_id:input_style_id,input_around_bust_id:input_around_bust_id,input_above_waist_id:input_above_waist_id,input_shoulder_id:input_shoulder_id,input_around_arm_id:input_around_arm_id,input_height_id:input_height_id,input_shoulder_height_id:input_shoulder_height_id,input_cross_front_id:input_cross_front_id,input_cross_back_id:input_cross_back_id,input_neck_depth_back_id:input_neck_depth_back_id,input_neck_depth_front_id:input_neck_depth_front_id,input_measurement_size_id:input_measurement_size_id,input_blouse_measurement_unit_id:input_blouse_measurement_unit_id,input_length_hps_id:input_length_hps_id,input_sleeve_length_id:input_sleeve_length_id,input_waist_id:input_waist_id,input_bicep_id:input_bicep_id,customer_blouse_name:customer_blouse_name,input_special_instruction:input_special_instruction,productid:productid},	
+		success: function(){
+			 jQuery('#added-blouse-row').show();
+			jQuery('#stich-blouse-id').hide(); 
+		}
+		});			
+	});
+	});
+</script>                                                                  
+<!-- =========================testing by chandan for blouse starts here========================= -->
+<?php 
+	if($modulestatus == 1) { 
+		$product_id = Mage::registry('current_product')->getId(); 	
+		$_product= Mage::getModel('catalog/product')->load($product_id);		 
+		$categoryIds = $_product->getCategoryIds(); 
+		$blouse_section = Mage::getModel('catalog/category')->load($categoryIds[0])->getData('blouse_section'); 	
+		$attribute_value = $_product->getResource()->getAttribute('blouse_section')->getFrontend()->getValue($_product); 				
+		if($attribute_value == "Yes" || $blouse_section == 1 ) {
+?>
+	<div class="switch_blows" onclick="showBlouse();" id="stich-blouse-id"> 
+		<input type="checkbox" id="chk-stitch-blouse" value="<?php echo $setprice; ?>"/>  Stitch a Blouse <span>(Add <?php echo Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol(); ?> <?php echo $setprice; ?>)</span>	
+	</div>
+<?php } } ?> 
+
+
+<!--popup start -->
+<!--easy return poup start -->
+	<div id="bk-overlay" class="add-new"></div>
+<div class="popup_full" id="popup_easyreturn">
+	<div class="pop_head-full">
+		<div class="popup_center blousecenter">
+			<div class="popup_main">
+				<div class="blouse-div">
+					<div class="blouse_part_heading">STITCH A BLOUSE <span class="color"> - Set your preferences</span>
+						<a href="javascript:void(0)" onclick='hideTab();jQuery("#chk-stitch-blouse").attr("checked", false);' id="close_blouse_section" ><span class="close">Close</span> 
+							<img alt="" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);?>frontend/base/default/blouse/images/blouse/cross-blouse.svg">
+						</a>	
+					</div>
+					<div class="blouse_main">
+					 <!--Creating Form-->
+					<!-- <form id="blouse_form" action="" method="post" onsubmit="return validatepostform();">  -->
+
+					<!--blosuse part 1 start -->
+						<div class="blouse_box_row active" >
+							<div class="blouse_box_heading blouse_heading-step1 completed current-step">STEP 01  |  Choose a style</div>
+							<div class="blouse_box_content blouse_content-step1" id="blouse_box_step1">
+								<div class="blouse_style">
+									<?php foreach ($collection as $item) { ?>									
+									<div class="blouse_style_box"><span id="error_style"></span>
+										<img alt="<?php echo $item->getContent(); ?>" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'blouse/'.$item->getFilename(); ?>">
+										<div class="blouse_style_box_title">
+										<input id="blouseselect<?php echo $item->getTitle(); ?>" name="style" type="radio" value="<?php echo $item->getTitle(); ?>" value2="<?php echo $item->getTitle(); ?>"> <span><?php echo $item->getTitle(); ?></span> 
+										</div>
+									</div>
+									<?php } ?>
+								</div>
+								<div class="content_botom_link">
+									<a class="seemore">See More Styles</a>
+									<a id="cancel_step1" href="javascript:void(0);" class="cancel" onclick='hideTab();jQuery("#chk-stitch-blouse").attr("checked", false);'>Cancel</a>
+									<a id="save_step1" class="save-cont" >Save &amp; Continue</a>
+								</div>
+							</div>
+						</div>
+					<!--blosuse part 1 end -->
+
+					<!--blosuse part 2 start -->
+						<div class="blouse_box_row">
+							<div class="blouse_box_heading blouse_heading-step2">STEP 02  |  Submit Measurements</div>
+							<div class="blouse_box_content blouse_content-step2" id="blouse_content-step2-id">
+							<!--measuremetn part 1 -->
+								<div class="measurements_main" id="blouse_box_step2" >
+									<div class="measurements_left-part">
+										<div class="custome_standard">
+											<input type='hidden' id="style-name-hidden" value="" name="hidden-style" />
+											<input id="custom-size" name="measurement_size" type="radio" value="CUSTOM SIZE"> <label>CUSTOM SIZE</label>
+											<input id="standard-size" name="measurement_size" type="radio" value="STANDARD SIZE" class="roundmargin"> <label>STANDARD SIZE</label>
+										</div>
+										<div id="measurement-size-id" class="measurement_size">
+											<span class="current ssize" id='current-xs' >XS</span>
+											<span class="ssize" id='current-s' >S</span> 
+											<span class='ssize' id='current-m'>M</span> 
+											<span class='ssize' id='current-l'>L</span> 
+											<span class='ssize' id='current-xl'>XL</span>
+											<span class="ssize" id='current-xxl' >XXL</span>
+										</div>
+										<div class="detail">
+											<div class="detail_row">
+												<label>LENGTH FROM HPS</label>
+												<input id="length_hps" name="length_hps" type="number" value="" placeholder="Please Enter value" class="required-entry validate-digits size-class">
+												<span id="length_hps-id"></span>
+												<span id="error-length_hps" style="color:red"></span>
+											</div>
+											<div class="detail_row">
+												<label>ABOVE BUST</label>
+												<input id="above_bust" name="above_bust" type="number" value="" placeholder="Please Enter value" class="required-entry validate-digits size-class">
+												<span id="above_bust-id"></span>
+												<span id="error-above_bust" style="color:red"></span>
+											</div>
+											<div class="detail_row">
+												<label>ROUND BUST</label>
+												<input id="around_bust" name="around_bust" type="number" value="" placeholder="Please Enter value" class="required-entry validate-digits size-class">
+												<span id="around_bust-id"></span>
+												<span id="error-around-bust" style="color:red"></span>
+											</div>
+											<div class="detail_row">
+												<label>BELOW BUST</label>
+												<input id="shoulder" name="shoulder" type="number" value="" placeholder="Please Enter value" class="required-entry validate-digits size-class">
+												<span id="shoulder-id"></span>
+												<span id="error-shoulder" style="color:red"></span>
+											</div>
+											<div class="detail_row">
+												<label>WAIST</label>
+												<input id="waist" name="waist" type="number" value="" placeholder="Please Enter value" class="required-entry validate-digits size-class">
+												<span id="waist-id"></span>
+												<span id="error-waist" style="color:red"></span>
+											</div>
+											<div class="detail_row">
+												<label>SHOULDER</label>
+												<input id="shoulder_height" name="shoulder_height" type="number" value="" placeholder="Please Enter value" class="required-entry validate-digits size-class">
+												<span id="shoulder_height-id"></span>
+												<span id="error-shoulder_height" style="color:red"></span>
+											</div>
+										<!--New rows added-->
+
+											<div class="detail_row">
+												<label>ACROSS FRONT</label>
+												<input id="cross_front" name="cross_front" type="number" value="" placeholder="Please Enter value" class="required-entry validate-digits size-class">
+												<span id="cross_front-id"></span>
+												<span id="error-cross_front" style="color:red"></span>
+											</div>
+											<div class="detail_row">
+												<label>ACROSS BACK</label>
+												<input id="cross_back" name="cross_back" type="number" value="" placeholder="Please Enter value" class="required-entry validate-digits size-class">
+												<span id="cross_back-id"></span>
+												<span id="error-cross_back" style="color:red"></span>
+											</div>
+											<div class="detail_row">
+												<label>NECK TO APEX</label>
+												<input id="height" name="height" type="number" value="" placeholder="Please Enter value" class="required-entry validate-digits size-class">
+												<span id="height-id"></span>
+												<span id="error-height" style="color:red"></span>
+											</div>
+											<div class="detail_row">
+												<label>ARMHOLE ROUND</label>
+												<input id="arm_hole" name="arm_hole" type="number" value="" placeholder="Please Enter value" class="required-entry validate-digits size-class">
+												<span id="arm_hole-id"></span>
+												<span id="error-arm_hole" style="color:red"></span>
+											</div>
+											<div class="detail_row">
+												<label>FRONT NECK DEPTH</label>
+												<input id="neck_depth_front" name="neck_depth_front" type="number" value="" placeholder="Please Enter value" class="required-entry validate-digits size-class">
+												<span id="neck_depth_front-id"></span>
+												<span id="error-neck_depth_front" style="color:red"></span>
+											</div>
+										<!--New Field-->
+											<div class="detail_row">
+												<label>BACK NECK DEPTH</label>
+												<input id="neck_depth_back" name="neck_depth_back" type="number" value="" placeholder="Please Enter value" class="required-entry validate-digits size-class">
+												<span id="neck_depth_back-id"></span>
+												<span id="error-neck_depth_back" style="color:red"></span>
+											</div>
+											<div class="detail_row">
+												<label>SLEEVE LENGTH CAP</label>
+												<input id="sleeve_length" name="sleeve_length" type="number" value="" placeholder="Please Enter value" class="required-entry validate-digits size-class">
+												<span id="sleeve_length-id"></span>
+												<span id="error-sleeve_length" style="color:red"></span>
+											</div>
+											<div class="detail_row">
+												<label>BICEP</label>
+												<input id="around_arm" name="around_arm" type="number" value="" placeholder="Please Enter value" class="required-entry validate-digits size-class">
+												<span id="around_arm-id"></span>
+												<span id="error-around_arm" style="color:red"></span>
+												<input type="hidden" name="selected_standard" id="selected_standard" value="" />
+											</div>
+										<!--End Here-->
+										<!--New rows added-->
+											<div class="detail_row">
+												<a href="javascript:void(0)" class="show_measurement" onClick="convertSizeValue();">Show measurements in Centimeters</a>
+											</div>
+										</div>
+									</div>
+									<div class="measurements_right-part">
+										<div class="image-boxn"><img alt="" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);?>frontend/base/default/blouse/images/blouse/measurements.svg" /></div>
+									</div>
+								</div>
+
+								<div class="content_botom_link">
+									<a href="javascript:void(0);" onclick='hideTab();jQuery("#chk-stitch-blouse").attr("checked", false);' id="cancel_step2" class="cancel">Cancel</a>
+									<a class="save-cont" onclick="validation_step2();">Save &amp; Continue</a>
+								</div>
+							</div>
+						</div>
+
+					<!--blosuse part 2 end -->
+					<!--blosuse part 3 start -->
+						<div class="blouse_box_row">
+							<div class="blouse_box_heading blouse_heading-step3">STEP 03  |  Review and Confirm</div>
+							<div class="blouse_box_content blouse_content-step3" id="blouse_content-step3-id">
+								<div id="blouse_box_step3" class="review-confirm">
+									<div class="review-confirm_infomation">										
+										<div class="review_blouse">
+											<div class="review_blouse_left">Blouse Style</div>
+											<div class="review_blouse_right" id="review_blouse_right-id">
+												<span id="style_name_step3">Square Neckline</span>
+												<div id="img_blouse_right-id"> 
+													
+												</div> 
+											</div>
+										</div>
+										<div class="review_measurements">
+											<div class="review_measurements_left">Measurements</div>
+											<div class="review_measurements_right">
+												<div class="measure_review_row">
+													<div class="measure_review_left-box">LENGTH FROM HPS</div>
+													<div class="measure_review_right-box" id="review-length_hps"></div>
+												</div>
+												<div class="measure_review_row">
+													<div class="measure_review_left-box">ABOVE BUST</div>
+													<div class="measure_review_right-box" id="review-above-waist"></div>
+												</div>
+												<div class="measure_review_row">
+													<div class="measure_review_left-box">ROUND BUST</div>
+													<div class="measure_review_right-box" id="review-around-bust"></div>
+												</div>
+												<div class="measure_review_row">
+													<div class="measure_review_left-box">BELOW BUST</div>
+													<div class="measure_review_right-box" id="review-shoulder"></div>
+												</div>
+												<div class="measure_review_row">
+													<div class="measure_review_left-box">WAIST</div>
+													<div class="measure_review_right-box" id="review-waist"></div>
+												</div>
+												<div class="measure_review_row">
+													<div class="measure_review_left-box">SHOULDER</div>
+													<div class="measure_review_right-box" id="review-shoulder-id"></div>
+												</div>
+												<div class="measure_review_row">
+													<div class="measure_review_left-box">ACROSS FRONT</div>
+													<div class="measure_review_right-box" id="review-cross-front"></div>
+												</div>
+												<div class="measure_review_row">
+													<div class="measure_review_left-box">ACROSS BACK</div>
+													<div class="measure_review_right-box" id="review-cross-back"></div>
+												</div>
+												<div class="measure_review_row">
+													<div class="measure_review_left-box">NECK TO APEX</div>
+													<div class="measure_review_right-box" id="review-height"></div>
+												</div>
+												<div class="measure_review_row">
+													<div class="measure_review_left-box">ARMHOLE ROUND</div>
+													<div class="measure_review_right-box" id="review-around-arm"></div>
+												</div>
+												<div class="measure_review_row">
+													<div class="measure_review_left-box">FRONT NECK DEPTH</div>
+													<div class="measure_review_right-box" id="review-neck-depth-front"></div>
+												</div>
+												<div class="measure_review_row">
+													<div class="measure_review_left-box">BACK NECK DEPTH</div>
+													<div class="measure_review_right-box" id="review-neck-depth-back"></div>
+												</div>
+												<div class="measure_review_row">
+													<div class="measure_review_left-box">SLEEVE LENGTH CAP</div>
+													<div class="measure_review_right-box" id="review-sleeve-length"></div>
+												</div>
+												<div class="measure_review_row border-none">
+													<div class="measure_review_left-box">BICEP</div>
+													<div class="measure_review_right-box" id="review-bicep"></div>
+												</div>
+											</div>
+										</div>
+										<div class="review_instructions">Special Instructions <span class="plus"></span></div>
+										<div class="instruction-details">
+											<textarea placeholder="Your message"  id="special-instruction" name="special_instruction" cols="" rows=""></textarea>
+										</div>
+									</div>
+									<div class="pricemain">
+										<div class="price-productinfo">
+											<p class="amount"><span>Price : <?php echo Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol(); ?> <?php echo $setprice; ?></span></p>
+											<p class="pro-detail">Your size and style selections &amp; instructions are subject to fabric pattern and limitations.</p>
+										</div>
+										<div class="save-cancel-box">
+											<div class="centerdiv">
+												<p class="save-continure"><a href="javascript:void(0)"  id="gun1" onclick="final_step();">Add To Cart</a></p>
+												<p class="cancel"><a id="cancel_step3" href="javascript:void(0)" onclick="reset_form(); hide_show();">Cancel</a></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<!--blosuse part 3 end -->
+					<!-- </form> -->
+					<!--End of Form-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--easy return poup end -->
+<!--div dispay after adding blous section -  start anand-->
+	<div id="error-added-blouse"></div>
+	<div class="blouse-added-row" id="added-blouse-row">
+		<div class="blouse-added-image" id="blouse-added-image-id">
+			<img alt="" src="<?php echo $this->getSkinUrl();?>images/blouse/classic-round.svg">
+		</div>
+		<div class="blouse-added-tick">
+			<img alt="" src="<?php echo $this->getSkinUrl();?>images/blouse/tick.png">
+		</div>
+		<div class="blouse-added-information">
+			<h3>BLOUSE ADDED</h3>
+			<h4 >STYLE: <span id="tittle-for-style-id"></span></h4>
+			<a class="view-blouse">View Measurements</a>
+		</div>
+	</div>
+<!--div dispay after adding blous section -  end anand-->
+
+   <!-- Start popup for mesurement    --> 
+          
+  <div id="bk-overlay-view-measure"></div>
+  <div class="main-class-view-measure" id="">
+    <div class="popup-full-view-measure">
+      <div class="popup-center-view-measure">
+        <div class="popup-main-view-measure">
+          <div class="close-bttn-view-measure"> <span>X</span></div>
+            <div class="popup-container-view-measure"> 
+            <div class="popup-content-view-measure">
+            <h1 class="popup-heading">Your Measurements</h1>
+            <div class="blouse_main">
+                <div class="review-confirm_infomation">
+                    <div class="review_measurements_right">
+
+                        <div class="measure_review_row">
+                            <div class="measure_review_left-box">LENGTH FROM HPS</div>
+                            <div class="measure_review_right-box" id="view-1"></div>
+                        </div>
+                         <div class="measure_review_row">
+                            <div class="measure_review_left-box">ABOVE BUST</div>
+                            <div class="measure_review_right-box" id="view-2"></div>
+                        </div>
+                         <div class="measure_review_row">
+                            <div class="measure_review_left-box">ROUND BUST</div>
+                            <div class="measure_review_right-box" id="view-3"></div>
+                        </div>
+                         <div class="measure_review_row">
+                            <div class="measure_review_left-box">BELOW BUST</div>
+                            <div class="measure_review_right-box" id="view-4"></div>
+                        </div>
+                         <div class="measure_review_row">
+                            <div class="measure_review_left-box">WAIST</div>
+                            <div class="measure_review_right-box" id="view-5"></div>
+                        </div>
+                         <div class="measure_review_row">
+                            <div class="measure_review_left-box">SHOULDER</div>
+                            <div class="measure_review_right-box" id="view-6"></div>
+                        </div>
+                         <div class="measure_review_row">
+                            <div class="measure_review_left-box">ACROSS FRONT</div>
+                            <div class="measure_review_right-box" id="view-7"></div>
+                        </div>
+                         <div class="measure_review_row">
+                            <div class="measure_review_left-box">ACROSS BACK</div>
+                            <div class="measure_review_right-box" id="view-8"></div>
+                        </div>
+                         <div class="measure_review_row">
+                            <div class="measure_review_left-box">NECK TO APEX</div>
+                            <div class="measure_review_right-box" id="view-9"></div>
+                        </div>
+                         <div class="measure_review_row">
+                            <div class="measure_review_left-box">ARMHOLE ROUND</div>
+                            <div class="measure_review_right-box" id="view-10"></div>
+                        </div>
+                         <div class="measure_review_row">
+                            <div class="measure_review_left-box">FRONT NECK DEPTH</div>
+                            <div class="measure_review_right-box" id="view-11"></div>
+                        </div>
+                         <div class="measure_review_row">
+                            <div class="measure_review_left-box">BACK NECK DEPTH</div>
+                            <div class="measure_review_right-box" id="view-12"></div>
+                        </div>
+                         <div class="measure_review_row">
+                            <div class="measure_review_left-box">SLEEVE LENGTH CAP</div>
+                            <div class="measure_review_right-box" id="view-13"></div>
+                        </div>
+                         <div class="measure_review_row">
+                            <div class="measure_review_left-box">BICEP</div>
+                            <div class="measure_review_right-box" id="view-14"></div>
+                        </div>
+                     </div>
+                </div>
+            </div>           
+                </div>
+           	  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+     <!-- End popup for mesurement    -->         
+                                                                                                                        		 
+	<input type="hidden" value="" name="blouse_style" id="input_style-id" />
+	<input type="hidden" value="" name="blouse_around_bust" id="input_around_bust-id" />
+	<input type="hidden" value="" name="blouse_above_waist" id="input_above_waist-id" />
+	<input type="hidden" value="" name="blouse_shoulder" id="input_shoulder-id" check="below_bust" />
+	<!-- <input type="hidden" value="" name="blouse_arm_hole" id="input_arm_hole-id" /> -->
+	<input type="hidden" value="" name="blouse_around_arm" id="input_around_arm-id" />
+	<input type="hidden" value="" name="blouse_height" id="input_height-id" check="neck to apex"/>
+	<input type="hidden" value="" name="blouse_shoulder_height" id="input_shoulder_height-id" check="shoulder"/>
+	<input type="hidden" value="" name="blouse_cross_front" id="input_cross_front-id" />
+	<input type="hidden" value="" name="blouse_cross_back" id="input_cross_back-id" />
+	<input type="hidden" value="" name="blouse_neck_depth_back" id="input_neck_depth_back-id" />
+	<input type="hidden" value="" name="blouse_neck_depth_front" id="input_neck_depth_front-id" />
+	<input type="hidden" value="" name="blouse_measurement_size" id="input_measurement_size-id" />
+	<input type="hidden" value="CM" name="blouse_measurement_unit" id="input_blouse_measurement_unit-id" />
+		<!--New Field start -->
+	<input type="hidden" value="" name="blouse_length_hps" id="input_length_hps-id" />
+	<input type="hidden" value="" name="blouse_sleeve_length" id="input_sleeve-length-id" />
+	<input type="hidden" value="" name="blouse_waist" id="input_waist-id" />
+	<input type="hidden" value="" name="blouse_bicep" id="input_bicep-id" />
+	<!--New Field End -->
+	<input type="hidden" value="" name="blouse_name" id="customer-blouse-name" />
+	<input type="hidden" value="" name="input_special_instruction" id="input-special-instruction" />
+            
+
+<script type="text/javascript">
+jQuery('input:radio[name=saree_radio]:nth(0)').attr('checked',true);    
+jQuery(document).ready(function(){
+	jQuery("#blouseselect").attr('checked', true);  
+    jQuery(".view-blouse").click(function(){
+		jQuery(".main-class-view-measure").show();
+		jQuery("#bk-overlay-view-measure").show();            
+    });
+
+	jQuery(".close-bttn-view-measure").click(function(){
+		jQuery("#bk-overlay-view-measure").hide();
+		jQuery(".main-class-view-measure").hide();
+	});	
+	jQuery(".differen-color > h3").click(function(){
+		jQuery(".differen-color > p").slideToggle();			
+	});
+	jQuery("#blouseclose").click(function(){ jQuery('#chk-stitch-blouse').attr('checked',false)});
+	
+	jQuery('.review_instructions').click(function(){
+		jQuery('.instruction-details').toggleClass('inst-display-block') 
+		jQuery('.review_instructions span').toggleClass('minus') 	 
+	});	
+});
+
+function blouseData(id){
+	document.getElementById(id).style.display = 'block';
+}
+
+var preform=new VarienForm('blouse_form');
+
+function validatepostform(){
+	if(preform.validator.validate())
+		return true;
+	else
+		return false;
+}
+
+function showBlouse()
+{
+    var showBlouse = "";          
+	jQuery(".add-new").addClass("bg-color");
+	showTab('popup_easyreturn');           
+}
+
+ 
+</script>
+
+
+
+<?php
+/*
+require_once("app/Mage.php");
+Mage::app('default');
+Mage::app()->setCurrentStore(Mage_Core_Model_App::ADMIN_STORE_ID);
+
+$installer = new Mage_Eav_Model_Entity_Setup('core_setup');
+$entityTypeId     = $installer->getEntityTypeId('catalog_category');
+$attributeSetId   = $installer->getDefaultAttributeSetId($entityTypeId);
+$attributeGroupId = $installer->getDefaultAttributeGroupId($entityTypeId, $attributeSetId);
+
+$installer->addAttribute('catalog_category', 'blouse_section',  array(
+    'group'    => 'General Information',
+    'type'     => 'int',
+    'label'    => 'Blouse Section Display',
+    'input'    => 'select',
+    'global'   => Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_STORE,
+    'visible'           => true,
+    'required'          => false,
+    'user_defined'      => false,
+    'default'           => 0,
+    'source' => 'eav/entity_attribute_source_boolean'
+));
+*/
+?>

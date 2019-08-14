@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <blouse_adminhtml_blouse_index>
+        <reference name="content">
+            <block type="blouse/adminhtml_blouse" name="blouse" />
+        </reference>
+    </blouse_adminhtml_blouse_index>
+</layout>

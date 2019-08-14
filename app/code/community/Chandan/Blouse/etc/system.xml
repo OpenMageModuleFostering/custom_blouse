@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <chandan translate="label" module="blouse">
+            <label>Blouse Setting</label>
+            <sort_order>100</sort_order>
+        </chandan>
+    </tabs>
+    <sections>
+        <chandan translate="label" module="blouse">
+            <label>Blouse</label>
+            <tab>chandan</tab>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+ 
+            <groups>
+                <chandan_group translate="label" module="blouse">
+                    <label>Blouse Setting</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+ 
+                    <fields>
+					
+						<chandan_blouse translate="label">
+                            <label>Enabled: </label>                            
+                            <frontend_type>select</frontend_type>
+                            <sort_order>19</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </chandan_blouse>
+										
+                        <chandan_input translate="label">
+                            <label>Price: </label>
+                            <comment>Set Customize Price </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </chandan_input>                    
+						
+                    </fields>
+                </chandan_group>
+            </groups>
+        </chandan>
+    </sections>
+</config>
