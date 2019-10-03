@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/custom_blouse",
+    "name": "OpenMageModuleFostering\/custom_blouse",
     "type": "magento-module",
     "license": "OSL",
     "homepage": "",
     "description": "Custom Blouse",
     "authors": [
-    {
-        "name": "Chandan Kumar Singh",
-        "email": "chandankumar8050@gmail.com"
-    }
-],
+        {
+            "name": "Chandan Kumar Singh",
+            "email": "chandankumar8050@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
